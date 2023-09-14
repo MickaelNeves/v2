@@ -25,3 +25,25 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+nav::before {
+  @apply bg-green;
+
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: var(--underline-left, 0px);
+  width: var(--underline-width, 0px);
+  height: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  position: relative;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.nav-link::first-letter {
+  text-transform: uppercase;
+}
