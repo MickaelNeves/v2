@@ -14,6 +14,7 @@ const AnimatedWord = ({
 }) => {
   const [hovered, setHovered] = useState(false);
   const wordRef = useRef<HTMLSpanElement | null>(null);
+
   const blueShades = [
     "#0074D9",
     "#007BD3",

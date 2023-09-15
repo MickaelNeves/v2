@@ -27,7 +27,7 @@ body {
 }
 
 nav::before {
-  @apply bg-emerald-green absolute;
+  @apply bg-warm-beige absolute;
 
   content: "";
   bottom: -2px;
@@ -38,7 +38,7 @@ nav::before {
 }
 
 .nav-link {
-  @apply hover:text-lightened-emerald-green transition-colors duration-200 ease-in relative grow text-center font-semibold;
+  @apply hover:text-lightened-warm-beige transition-colors duration-200 ease-in relative grow text-center font-semibold;
 }
 
 .nav-link::first-letter {
@@ -108,4 +108,46 @@ nav::before {
 
 .animate-fadeInRight {
   animation: fadeInRight 0.5s forwards;
+}
+
+@keyframes fillGradient {
+  0% {
+    background-image: linear-gradient(to left, transparent, transparent);
+  }
+  100% {
+    background-image: linear-gradient(
+      to left,
+      rgba(44, 62, 80, 0.8),
+      transparent
+    );
+  }
+}
+
+.col-background {
+  background: linear-gradient(to left, transparent, transparent);
+  transition: background-image 0.5s ease-in-out;
+}
+
+.card:hover .col-background {
+  animation: fillGradient 0.5s forwards;
+}
+
+.col-background:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  background-image: linear-gradient(
+    to left,
+    rgba(44, 62, 80, 0.8),
+    transparent
+  );
+  z-index: -1;
+  transition: width 0.25s ease-in-out;
+}
+
+.card:hover .col-background:before {
+  width: 100%;
 }

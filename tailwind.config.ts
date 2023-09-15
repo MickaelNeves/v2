@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         "emerald-green": "#2ecc71",
         "lightened-emerald-green": "#48e585",
+        "warm-beige": "#f5f5dc",
+        "lightened-warm-beige": "#E8D9BF",
         "amethyst-purple": "#9b59b6",
         "midnight-blue": "#2c3e50",
         "charcoal-grey": "#34495e",

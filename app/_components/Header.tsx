@@ -1,7 +1,25 @@
 "use client";
 
 import { RefObject, useEffect, useRef, useState } from "react";
-import { SECTIONS } from "../_types/enums";
+
+import { SECTIONS } from "@/app/_types/enums";
+
+const NavLink = ({
+  activeSection,
+  section,
+}: {
+  activeSection: string;
+  section: string;
+}) => (
+  <a
+    href={`#${section}`}
+    className={`nav-link ${
+      activeSection === section ? `${section}-active` : ""
+    }`}
+  >
+    {section}
+  </a>
+);
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState<string>("");
@@ -52,7 +70,10 @@ const Header = () => {
       }
     };
 
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -61,7 +82,7 @@ const Header = () => {
   }, [activeSection]);
 
   return (
-    <header className="fixed top-0 left-0 w-full h-16 flex justify-center items-center backdrop-blur-md">
+    <header className="fixed top-0 left-0 w-full h-16 z-50 flex justify-center items-center backdrop-blur-md">
       <nav
         className="space-x-4 relative flex"
         ref={navRef as RefObject<HTMLDivElement>}
@@ -72,34 +93,9 @@ const Header = () => {
           } as React.CSSProperties
         }
       >
-        <a
-          href={`#${SECTIONS.ABOUT}`}
-          className={`nav-link ${
-            activeSection === SECTIONS.ABOUT ? `${SECTIONS.ABOUT}-active` : ""
-          }`}
-        >
-          {SECTIONS.ABOUT}
-        </a>
-        <a
-          href={`#${SECTIONS.EXPERIENCE}`}
-          className={`nav-link ${
-            activeSection === SECTIONS.EXPERIENCE
-              ? `${SECTIONS.EXPERIENCE}-active`
-              : ""
-          }`}
-        >
-          {SECTIONS.EXPERIENCE}
-        </a>
-        <a
-          href={`#${SECTIONS.PROJECTS}`}
-          className={`nav-link ${
-            activeSection === SECTIONS.PROJECTS
-              ? `${SECTIONS.PROJECTS}-active`
-              : ""
-          }`}
-        >
-          {SECTIONS.PROJECTS}
-        </a>
+        <NavLink activeSection={activeSection} section={SECTIONS.ABOUT} />
+        <NavLink activeSection={activeSection} section={SECTIONS.EXPERIENCE} />
+        <NavLink activeSection={activeSection} section={SECTIONS.PROJECTS} />
       </nav>
     </header>
   );
