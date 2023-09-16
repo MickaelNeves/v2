@@ -39,7 +39,7 @@ const CustomTable = ({ data }: { data: Project[] }) => {
               <td className="py-4 pr-4 align-top text-sm">
                 <div className="translate-y-px">{item.year}</div>
               </td>
-              <td className="py-4 pr-4 align-top font-semibold leading-snug text-slate-200">
+              <td className="py-4 pr-4 align-top font-semibold">
                 <div>
                   <div className="block sm:hidden">
                     <CustomLink link={item.link}>{item.title}</CustomLink>

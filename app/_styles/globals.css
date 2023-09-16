@@ -93,13 +93,17 @@ nav::before {
 
 @keyframes fillGradient {
   0% {
-    background-image: linear-gradient(to right, transparent, transparent);
+    background-image: linear-gradient(
+      to right,
+      transparent 100%,
+      transparent 100%
+    );
   }
   100% {
     background-image: linear-gradient(
       to right,
-      rgba(241, 246, 249, 0.1),
-      transparent
+      rgba(175, 179, 182, 0.1) 0%,
+      transparent 100%
     );
   }
 }
@@ -122,7 +126,7 @@ nav::before {
   width: 0;
   background-image: linear-gradient(
     to right,
-    rgba(241, 246, 249, 0.1),
+    rgba(175, 179, 182, 0.1),
     transparent
   );
   z-index: -1;

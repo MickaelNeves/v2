@@ -8,7 +8,7 @@ const AnimatedPhrase = ({ phrase }: { phrase: string }) => {
 
   return (
     <span
-      className="relative group inline-block text-white font-bold"
+      className="relative group inline-block text-white font-semibold"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

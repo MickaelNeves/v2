@@ -19,7 +19,7 @@ const CardExperience = ({ link }: { link: string }) => {
   return (
     <div
       onClick={handleCardClick}
-      className="md:grid md:grid-cols-8 gap-10 mb-10 hover:cursor-pointer card relative md:opacity-25 hover:opacity-100 transition duration-150 ease-in"
+      className="md:grid md:grid-cols-8 gap-10 mb-10 hover:cursor-pointer card relative md:opacity-75 hover:opacity-100 transition duration-150 ease-in"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
