@@ -1,7 +1,12 @@
+import dynamic from "next/dynamic";
+
 import CustomLink from "@/app/_components/CustomLink";
-import ListSkills from "@/app/_components/ListSkills";
 
 import { Project } from "@/app/_types";
+
+const ListSkills: any = dynamic(() => import("@/app/_components/ListSkills"), {
+  ssr: false,
+});
 
 const CustomTable = ({ data }: { data: Project[] }) => {
   return (
@@ -48,7 +53,7 @@ const CustomTable = ({ data }: { data: Project[] }) => {
                 </div>
               </td>
               <td className="hidden py-4 pr-4 align-top lg:table-cell">
-                <ListSkills left skills={item.skills} />
+                <ListSkills skills={item.skills} />
               </td>
               <td className="hidden py-4 align-top sm:table-cell">
                 <CustomLink link={item.link}>Page</CustomLink>

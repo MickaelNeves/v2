@@ -5,8 +5,8 @@ import { ANIMATION_TYPES, SECTIONS } from "@/app/_types/enums";
 
 const About = () => {
   return (
-    <section id={SECTIONS.ABOUT} className="py-24 md:py-32 md:text-right">
-      <p className="text-greyish-white">
+    <section id={SECTIONS.ABOUT} className="py-24 md:py-32">
+      <p className="text-blue-500">
         Back in 2016, I took a leap of faith and{" "}
         <AnimatedPhrase phrase="switched careers" /> from being a telecom
         technician to diving deep into the world of web development. The initial
@@ -18,15 +18,15 @@ const About = () => {
         to the vast and ever-evolving landscape of web development, and I
         haven&apos;t looked back since.
       </p>
-      <p className="text-greyish-white py-4">
+      <p className="text-blue-500 py-4">
         When I&apos;m not knee-deep into work, you&apos;ll find me
-        <b className="text-white hover:text-lightened-warm-beige transition-colors duration-200 ease-in">
+        <b className="text-white hover:text-blue-800 transition-colors duration-200 ease-in">
           {" "}
           experimenting with new tech
         </b>
         , continuing my foray into game dev, or taking a complete digital detox.
         Away from the screen, I embrace the
-        <b className="text-white hover:text-lightened-warm-beige transition-colors duration-200 ease-in">
+        <b className="text-white hover:text-blue-800 transition-colors duration-200 ease-in">
           {" "}
           digital nomad
         </b>{" "}
@@ -39,7 +39,7 @@ const About = () => {
         and the <AnimatedWord word="strum" type={ANIMATION_TYPES.SHAKE} /> of my
         guitar.
       </p>
-      <p className="text-greyish-white">
+      <p className="text-blue-500">
         Whether it&apos;s the virtual realm of development or the tangible beats
         of music and the thrill of travel, I&apos;m always on the hunt for the
         next adventure!

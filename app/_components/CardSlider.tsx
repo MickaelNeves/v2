@@ -25,7 +25,7 @@ const CardSlider = ({ data }: { data: Project[] }) => {
     >
       {data.map((item) => (
         <SwiperSlide key={item.id} className="">
-          <div className="w-full h-full min-h-[300px] hover:cursor-pointer md:text-right">
+          <div className="w-full h-full min-h-[300px] hover:cursor-pointer">
             <CardProject project={item} />
           </div>
         </SwiperSlide>

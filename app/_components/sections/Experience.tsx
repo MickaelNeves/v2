@@ -8,9 +8,7 @@ const Experience = () => {
     <section id={SECTIONS.EXPERIENCE} className="py-20 w-full">
       <CardExperience link="/" />
       <CardExperience link="/" />
-      <div className="flex md:justify-end">
-        <CustomLink link="/resume.pdf">Go to CV</CustomLink>
-      </div>
+      <CustomLink link="/resume.pdf">Go to CV</CustomLink>
     </section>
   );
 };

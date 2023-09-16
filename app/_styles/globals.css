@@ -2,32 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 236, 240, 241;
-    --background-start-rgb: 44, 62, 80;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #f1f6f9;
+  background: #212a3e;
 }
 
 nav::before {
-  @apply bg-warm-beige absolute;
+  @apply bg-blue-500 absolute;
 
   content: "";
   bottom: -2px;
@@ -38,7 +19,7 @@ nav::before {
 }
 
 .nav-link {
-  @apply hover:text-lightened-warm-beige transition-colors duration-200 ease-in relative grow text-center font-semibold;
+  @apply hover:text-blue-800 transition-colors duration-200 ease-in relative grow text-center font-semibold;
 }
 
 .nav-link::first-letter {
@@ -112,19 +93,19 @@ nav::before {
 
 @keyframes fillGradient {
   0% {
-    background-image: linear-gradient(to left, transparent, transparent);
+    background-image: linear-gradient(to right, transparent, transparent);
   }
   100% {
     background-image: linear-gradient(
-      to left,
-      rgba(44, 62, 80, 0.8),
+      to right,
+      rgba(241, 246, 249, 0.1),
       transparent
     );
   }
 }
 
 .col-background {
-  background: linear-gradient(to left, transparent, transparent);
+  background: linear-gradient(to right, transparent, transparent);
   transition: background-image 0.5s ease-in-out;
 }
 
@@ -136,12 +117,12 @@ nav::before {
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   bottom: 0;
   width: 0;
   background-image: linear-gradient(
-    to left,
-    rgba(44, 62, 80, 0.8),
+    to right,
+    rgba(241, 246, 249, 0.1),
     transparent
   );
   z-index: -1;

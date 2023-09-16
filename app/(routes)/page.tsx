@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="md:grid md:grid-cols-3 md:gap-4 h-full">
+      <div className="md:grid md:grid-cols-3 md:gap-20 h-full">
         <Title />
         <div className="col-span-2 overflow-y-auto">
           <About />
