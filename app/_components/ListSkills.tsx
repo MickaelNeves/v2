@@ -1,8 +1,12 @@
-type Skill = string[];
+type Skill = { skills: string[]; left?: boolean };
 
-const ListSkills = ({ skills }: { skills: Skill }) => {
+const ListSkills = ({ skills, left = false }: Skill) => {
   return (
-    <ul className="flex flex-wrap md:justify-end gap-3 text-sm font-medium text-emerald-green">
+    <ul
+      className={`flex flex-wrap ${
+        left ? "justify-start" : "md:justify-end"
+      } gap-3 text-sm font-medium text-emerald-green`}
+    >
       {skills.map((skill, index) => {
         return (
           <li key={index}>
