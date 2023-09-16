@@ -1,20 +1,21 @@
-import { SECTIONS } from "@/app/_types/enums";
-
-import About from "@/app/_components/About";
-import Title from "@/app/_components/Title";
-import Experience from "@/app/_components/Experience";
+import Title from "@/app/_components/sections/Title";
+import Experience from "@/app/_components/sections/Experience";
+import Projects from "@/app/_components/sections/Projects";
+import About from "@/app/_components/sections/About";
+import Footer from "@/app/_components/Footer";
 
 export default function Home() {
   return (
-    <div className="md:grid md:grid-cols-3 md:gap-4 h-full">
-      <Title />
-      <div className="col-span-2 overflow-y-auto">
-        <About />
-        <Experience />
-        <section id={SECTIONS.PROJECTS} className="h-screen pt-20">
-          Projects
-        </section>
+    <>
+      <div className="md:grid md:grid-cols-3 md:gap-4 h-full">
+        <Title />
+        <div className="col-span-2 overflow-y-auto">
+          <About />
+          <Experience />
+          <Projects />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
