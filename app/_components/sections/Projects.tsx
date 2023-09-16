@@ -76,7 +76,7 @@ const data = [
 
 const Projects = () => {
   return (
-    <section id={SECTIONS.PROJECTS} className="h-[80vh] pt-20">
+    <section id={SECTIONS.PROJECTS} className="pt-20">
       <CardSlider data={data} />
       <CustomLink link="/projects">Go to Projects</CustomLink>
     </section>
