@@ -1,10 +1,28 @@
-export type Project = {
-  id: number;
-  year: number;
-  company: string;
-  title: string;
+export interface Experience {
+  id: string;
+  period: string;
+  metadata: {
+    skills: string[];
+    positions: string[];
+  };
   description: string;
-  link: string;
-  image: string;
-  skills: string[];
-};
+  company: string;
+  url: string;
+}
+
+export interface Project {
+  id: string;
+  period: string;
+  title: string;
+  isFeatured: boolean;
+  metadata: {
+    skills: string[];
+  };
+  description: string;
+  company: string;
+  image: {
+    id: string;
+    url: string;
+  };
+  url: string;
+}

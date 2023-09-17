@@ -26,7 +26,7 @@ const Title = () => {
           <a
             key={social.name}
             href={social.url}
-            className="hover:opacity-50 transition duration-150 ease-in"
+            className="hover:opacity-40 transition duration-150 ease-in"
           >
             <Image
               src={social.icon}

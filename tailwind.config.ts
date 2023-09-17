@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         "emerald-green": "#2ecc71",
+        blue: "#3B82F6",
         "blue-100": "#f1f6f9",
         "blue-500": "#9ba4b5",
         "blue-800": "#394867",
@@ -22,6 +23,18 @@ const config: Config = {
         gray: "#95a5a6",
         silver: "#bdc3c7",
         coral: "#e57373",
+        indigo: "#4C51BF",
+        pink: "#D53F8C",
+        rose: "#F43F5E",
+        cyan: "#06B6D4",
+        fuchsia: "#D946EF",
+        violet: "#7E22CE",
+        "light-blue": "#3B82F6",
+        lime: "#84CC16",
+        emerald: "#059669",
+        green: "#10B981",
+        purple: "#7952B3",
+        "slack-green": "#3A3D54",
       },
       animation: {
         waveAnimation: "waveAnimation 0.5s ease-in-out infinite",

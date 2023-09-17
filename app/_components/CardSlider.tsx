@@ -23,13 +23,15 @@ const CardSlider = ({ data }: { data: Project[] }) => {
         1024: { slidesPerView: 2.2 },
       }}
     >
-      {data.map((item) => (
-        <SwiperSlide key={item.id} className="">
-          <div className="w-full h-full min-h-[300px] hover:cursor-pointer">
-            <CardProject project={item} />
-          </div>
-        </SwiperSlide>
-      ))}
+      {data
+        .filter((item) => item.isFeatured)
+        .map((item) => (
+          <SwiperSlide key={item.id} className="">
+            <div className="w-full h-full min-h-[300px] hover:cursor-pointer">
+              <CardProject project={item} />
+            </div>
+          </SwiperSlide>
+        ))}
     </Swiper>
   );
 };

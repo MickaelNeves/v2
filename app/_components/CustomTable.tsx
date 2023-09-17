@@ -1,14 +1,15 @@
-import dynamic from "next/dynamic";
-
 import CustomLink from "@/app/_components/CustomLink";
+import ListSkills from "@/app/_components/ListSkills";
 
 import { Project } from "@/app/_types";
 
-const ListSkills: any = dynamic(() => import("@/app/_components/ListSkills"), {
-  ssr: false,
-});
-
 const CustomTable = ({ data }: { data: Project[] }) => {
+  const orderByPeriod = (a: Project, b: Project) => {
+    return Number(b.period) - Number(a.period);
+  };
+
+  const sortedData = [...data].sort(orderByPeriod);
+
   return (
     <table
       id="table-content"
@@ -30,19 +31,19 @@ const CustomTable = ({ data }: { data: Project[] }) => {
         </tr>
       </thead>
       <tbody>
-        {data.map((item) => {
+        {sortedData.map((item) => {
           return (
             <tr
               key={item.id}
               className="border-b border-white/10 last:border-none"
             >
               <td className="py-4 pr-4 align-top text-sm">
-                <div className="translate-y-px">{item.year}</div>
+                <div className="translate-y-px">{item.period}</div>
               </td>
               <td className="py-4 pr-4 align-top font-semibold">
                 <div>
                   <div className="block sm:hidden">
-                    <CustomLink link={item.link}>{item.title}</CustomLink>
+                    <CustomLink link={item.url}>{item.title}</CustomLink>
                   </div>
                   <div className="hidden sm:block">{item.title}</div>
                 </div>
@@ -53,10 +54,10 @@ const CustomTable = ({ data }: { data: Project[] }) => {
                 </div>
               </td>
               <td className="hidden py-4 pr-4 align-top lg:table-cell">
-                <ListSkills skills={item.skills} />
+                <ListSkills skills={item.metadata.skills} />
               </td>
               <td className="hidden py-4 align-top sm:table-cell">
-                <CustomLink link={item.link}>Page</CustomLink>
+                <CustomLink link={item.url}>Page</CustomLink>
               </td>
             </tr>
           );
