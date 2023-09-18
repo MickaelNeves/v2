@@ -5,7 +5,7 @@ import Script from "next/script";
 import "@/app/_styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-const GTM_ID = "GTM-NFNL9S33";
+const GTM_ID = process.env.GOOGLE_TAG_MANAGER || "";
 
 export const metadata: Metadata = {
   title: "Mickael Neves",
