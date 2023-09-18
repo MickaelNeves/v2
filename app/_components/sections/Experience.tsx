@@ -17,7 +17,9 @@ const Experience = async () => {
           {...experience}
         />
       ))}
-      <CustomLink link="/resume.pdf">Go to CV</CustomLink>
+      <CustomLink link="/resume.pdf" newTab={false}>
+        Go to CV
+      </CustomLink>
     </section>
   );
 };

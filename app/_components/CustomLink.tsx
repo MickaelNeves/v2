@@ -5,13 +5,19 @@ type Props = {
   children: React.ReactNode;
   controlled?: boolean;
   link: string;
+  newTab?: boolean;
 };
 
-const CustomLink = ({ children, controlled = false, link }: Props) => {
+const CustomLink = ({
+  children,
+  controlled = false,
+  link,
+  newTab = true,
+}: Props) => {
   return (
     <Link
       href={link}
-      target="_blank"
+      target={newTab ? "_blank" : "_self"}
       className={`inline-flex gap-2 relative w-fit before:w-full before:h-0.5 before:origin-left before:transition-transform before:duration-300 before:scale-x-0 before:bg-blue-500 before:absolute before:left-0 before:bottom-0 ${
         controlled
           ? "before:scale-x-100 before:origin-left"

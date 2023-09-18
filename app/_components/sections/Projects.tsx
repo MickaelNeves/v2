@@ -11,7 +11,9 @@ const Projects = async () => {
   return (
     <section id={SECTIONS.PROJECTS} className="min-h-screen pt-20">
       <CardSlider data={projects} />
-      <CustomLink link="/projects">Go to Projects</CustomLink>
+      <CustomLink link="/projects" newTab={false}>
+        Go to Projects
+      </CustomLink>
     </section>
   );
 };

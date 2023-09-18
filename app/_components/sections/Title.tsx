@@ -19,13 +19,17 @@ const Title = () => {
         I build products and deliver top-notch user experiences.
       </p>
       <div className="my-6 md:mt-20 flex-1">
-        <CustomLink link="/recommendations.pdf">Recommendations</CustomLink>
+        <CustomLink link="/recommendations.pdf" newTab={false}>
+          Recommendations
+        </CustomLink>
       </div>
       <div className="flex items-center gap-6">
         {socialData.map((social) => (
           <a
             key={social.name}
             href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hover:opacity-40 transition duration-150 ease-in"
           >
             <Image
