@@ -21,7 +21,7 @@ export default async function Projects() {
         />
         Go Back
       </Link>
-      <CustomTable data={projects} />
+      <CustomTable data={projects.filter((p) => p.isShown)} />
     </section>
   );
 }

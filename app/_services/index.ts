@@ -53,6 +53,7 @@ export async function getProjects(): Promise<ProjectsResult> {
         period
         title
         url
+        isShown
       }
     }
   `;

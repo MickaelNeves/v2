@@ -25,4 +25,5 @@ export interface Project {
     url: string;
   };
   url: string;
+  isShown: boolean;
 }

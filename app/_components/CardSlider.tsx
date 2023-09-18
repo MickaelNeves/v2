@@ -27,7 +27,7 @@ const CardSlider = ({ data }: { data: Project[] }) => {
         .filter((item) => item.isFeatured)
         .map((item) => (
           <SwiperSlide key={item.id} className="">
-            <div className="w-full h-full min-h-[300px] hover:cursor-pointer">
+            <div className="w-full h-full min-h-[300px]">
               <CardProject project={item} />
             </div>
           </SwiperSlide>
