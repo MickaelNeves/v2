@@ -2,7 +2,7 @@ import CustomLink from "./CustomLink";
 
 const Footer = () => {
   return (
-    <footer className="text-center md:justify-start pt-40 pb-20 text-blue-500 text-sm flex items-center">
+    <footer className="text-center md:justify-start pt-40 pb-20 text-blue-500 text-sm md:flex md:items-center">
       Built with
       <span className="text-white hover:text-blue-800 transition-colors duration-200 ease-in ml-1 font-semibold">
         Next.js
