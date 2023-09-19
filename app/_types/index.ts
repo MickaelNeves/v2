@@ -6,6 +6,11 @@ export interface Experience {
     positions: string[];
   };
   description: string;
+  descriptionBlock: {
+    raw: {
+      children: [type: string, children: any];
+    };
+  };
   company: string;
   url: string;
 }

@@ -20,6 +20,9 @@ export async function getExperiences(): Promise<ExperienceResult> {
         period
         metadata
         description
+        descriptionBlock {
+          raw
+        }
         company
         url
       }
