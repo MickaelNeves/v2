@@ -11,6 +11,33 @@ export const metadata: Metadata = {
   title: "Mickael Neves",
   description:
     "Mickael Neves is a senior front-end engineer who builds products and delivers top-notch user experiences.",
+  keywords: [
+    "Next.js",
+    "React",
+    "Tailwind",
+    "Hygraph",
+    "Portfolio",
+    "Mickael Neves",
+  ],
+  authors: [{ name: "Mickael Neves" }],
+  creator: "Mickael Neves",
+  publisher: "Mickael Neves",
+  openGraph: {
+    title: "Mickael Neves",
+    description:
+      "Mickael Neves is a senior front-end engineer who builds products and delivers top-notch user experiences.",
+    url: "https://mikemneves.com",
+    siteName: "Portfolio",
+    images: [
+      {
+        url: "https://mikemneves.com/opengraph-image.jpg",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "pt_PT",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
