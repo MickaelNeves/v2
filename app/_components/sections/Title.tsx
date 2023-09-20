@@ -6,7 +6,8 @@ import { socialData } from "@/app/config";
 const Title = () => {
   return (
     <section className="flex flex-col col-span-1 md:h-screen md:sticky top-0 pt-24 md:pt-32 md:pb-20">
-      <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+      <Image src="/me.png" width={200} height={200} alt="Mickael Neves" />
+      <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
         <Link
           href="/"
           className="hover:text-blue-800 hover:cursor-pointer transition-colors duration-200 ease-in"
