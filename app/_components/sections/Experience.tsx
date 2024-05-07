@@ -10,13 +10,15 @@ const Experience = async () => {
 
   return (
     <section id={SECTIONS.EXPERIENCE} className="py-20 w-full">
-      {experiences.map((experience, idx) => (
-        <CardExperience
-          key={experience.id}
-          isFirstCard={idx === 0}
-          {...experience}
-        />
-      ))}
+      {experiences
+        .sort((a, b) => a.order - b.order)
+        .map((experience, idx) => (
+          <CardExperience
+            key={experience.id}
+            isFirstCard={idx === 0}
+            {...experience}
+          />
+        ))}
       <CustomLink link="/resume.pdf" newTab={false}>
         Go to CV
       </CustomLink>

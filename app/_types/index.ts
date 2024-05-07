@@ -13,6 +13,7 @@ export interface Experience {
   };
   company: string;
   url: string;
+  order: number;
 }
 
 export interface Project {
